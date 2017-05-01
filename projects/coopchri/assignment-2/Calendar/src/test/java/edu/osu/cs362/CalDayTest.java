@@ -12,10 +12,52 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class CalDayTest {
-
+         @Test
+         public void test01() throws Throwable {
+            GregorianCalendar cal = new GregorianCalendar();
+            CalDay today = new CalDay();
+         }
 	 @Test
-	  public void test01()  throws Throwable  {
+	  public void test02()  throws Throwable  {
+            int startHour1 = 10;
+            int startMinute1 = 30;
+            String title1 = "Test Appointment";
+            String description1 = "test appointment.";
+            GregorianCalendar cal = new GregorianCalendar();
+            CalDay today = new CalDay(cal);
+            Appt appt1 = new Appt(startHour1,
+                  startMinute1 ,
+                  today.getDay() ,
+                  today.getMonth() ,
+                  today.getYear() ,
+                  title1 ,
+                  description1);
+            today.addAppt(appt1);
+            int startHour2 = 9;
+            int startMinute2 = 30;
+            String title2 = "Test Appointment";
+            String description2 = "test appointment.";
+            Appt appt2 = new Appt(startHour2,
+                  startMinute2 ,
+                  today.getDay() ,
+                  today.getMonth() ,
+                  today.getYear() ,
+                  title2 ,
+                  description2);
+            today.addAppt(appt2);
+	    int startHour3 = 11;
+            int startMinute3 = 30;
+            String title3 = "Test Appointment";
+            String description3 = "test appointment.";
+            Appt appt3 = new Appt(startHour3,
+                  startMinute3 ,
+                  today.getDay() ,
+                  today.getMonth() ,
+                  today.getYear() ,
+                  title3 ,
+                  description3);
+            today.addAppt(appt3);
+            String day = today.toString();
+ }
 
-	 }
-	
 }

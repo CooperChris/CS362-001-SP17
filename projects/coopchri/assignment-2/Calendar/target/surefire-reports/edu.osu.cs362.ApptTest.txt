@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: edu.osu.cs362.ApptTest
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.277 sec <<< FAILURE!
-test02(edu.osu.cs362.ApptTest)  Time elapsed: 0.007 sec  <<< FAILURE!
+Tests run: 8, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec <<< FAILURE!
+test02(edu.osu.cs362.ApptTest)  Time elapsed: 0.002 sec  <<< FAILURE!
 java.lang.AssertionError
 	at org.junit.Assert.fail(Assert.java:86)
 	at org.junit.Assert.assertTrue(Assert.java:41)
