@@ -63,7 +63,7 @@ public class ApptTest {
 		 assertEquals(24, appt.getStartHour());
 		 assertEquals(60, appt.getStartMinute());
 		 assertEquals(32, appt.getStartDay());
-		 assertEquals(0, appt.getStartMonth());
+		 assertEquals(13, appt.getStartMonth());
 		 assertEquals(2017, appt.getStartYear());
 		 assertEquals("", appt.getTitle());
 		 assertEquals("", appt.getDescription());         		
@@ -128,7 +128,7 @@ public class ApptTest {
 		          title,
 		         description);
 	// assertions
-		 assertTrue(appt.getValid());
+		 assertTrue(!appt.getValid());
 		 assertEquals(12, appt.getStartHour());
 		 assertEquals(60, appt.getStartMinute());
 		 assertEquals(32, appt.getStartDay());
@@ -158,7 +158,7 @@ public class ApptTest {
 		          title,
 		         description);
 	// assertions
-		 assertTrue(appt.getValid());
+		 assertTrue(!appt.getValid());
 		 assertEquals(12, appt.getStartHour());
 		 assertEquals(30, appt.getStartMinute());
 		 assertEquals(32, appt.getStartDay());
@@ -189,7 +189,7 @@ public class ApptTest {
 		         description);
                  String testString = appt.toString();
 	// assertions
-		 assertTrue(appt.getValid());
+		 assertTrue(!appt.getValid());
 		 assertEquals(13, appt.getStartHour());
 		 assertEquals(30, appt.getStartMinute());
 		 assertEquals(10, appt.getStartDay());
@@ -259,6 +259,36 @@ public class ApptTest {
 		 assertEquals(2017, appt.getStartYear());
 		 assertEquals("Birthday Party", appt.getTitle());
 		 assertEquals("This is my birthday party.", appt.getDescription());         		
+	 }
+    /**
+     * Test that the gets methods work incorrectly.
+     */
+	 @Test
+	  public void test09()  throws Throwable  {
+		 int startHour=-1;
+		 int startMinute=-1;
+		 int startDay=0;
+		 int startMonth=13;
+		 int startYear=2017;
+		 String title=null;
+		 String description=null;
+		 //Construct a new Appointment object with the initial data	 
+		 Appt appt = new Appt(startHour,
+		          startMinute ,
+		          startDay ,
+		          startMonth ,
+		          startYear ,
+		          title,
+		         description);
+	// assertions
+		 assertTrue(!appt.getValid());
+		 assertEquals(-1, appt.getStartHour());
+		 assertEquals(-1, appt.getStartMinute());
+		 assertEquals(0, appt.getStartDay());
+		 assertEquals(13, appt.getStartMonth());
+		 assertEquals(2017, appt.getStartYear());
+		 assertEquals("", appt.getTitle());
+		 assertEquals("", appt.getDescription());         		
 	 }
 
 }

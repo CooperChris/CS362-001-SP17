@@ -57,6 +57,19 @@ public class CalDayTest {
                   title3 ,
                   description3);
             today.addAppt(appt3);
+            int startHour4 = 10;
+            int startMinute4 = 30;
+            String title4 = "Test Appointment";
+            String description4 = "test appointment.";
+            Appt appt4 = new Appt(startHour4,
+                  startMinute4 ,
+                  today.getDay() ,
+                  today.getMonth() ,
+                  today.getYear() ,
+                  title4 ,
+                  description4);
+            today.addAppt(appt4);
+
             String day = today.toString();
  }
 
