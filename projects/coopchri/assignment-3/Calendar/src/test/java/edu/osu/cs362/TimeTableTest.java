@@ -17,7 +17,14 @@ public class TimeTableTest {
 
 	 @Test
 	  public void test01()  throws Throwable  {
-		 
-	 }
+            LinkedList<Appt> appts = new LinkedList<Appt>();
+            GregorianCalendar calendar = new GregorianCalendar(2017,
+                  0, 28, 10, 30);
+
+            GregorianCalendar calendar1 = new GregorianCalendar(2017,
+                  0, 29, 10, 30);
+            TimeTable table = new TimeTable();
+            table.getApptRange(appts, calendar, calendar1);
+         }
 
 }

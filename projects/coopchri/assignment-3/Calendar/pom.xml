@@ -55,7 +55,11 @@
 			    <param>edu.osu.cs362.TimeTableTest</param>
 			</targetTests>
 			<avoidCallsTo><!--A List of packages, classes and methods which are to be considered outside the scope of mutation.-->
-    				<avoidCallsTo>java.io.PrintStream</avoidCallsTo>
+                           <avoidCallsTo>java.io.PrintStream</avoidCallsTo>
+                           <avoidCallsTo>edu.osu.cs362.CalDay.setDay()</avoidCallsTo>
+                           <avoidCallsTo>edu.osu.cs362.CalDay.setMonth()</avoidCallsTo>
+                           <avoidCallsTo>edu.osu.cs362.CalDay.setYear()</avoidCallsTo>
+                           <avoidCallsTo>edu.osu.cs362.CalDay.setAppts()</avoidCallsTo>
 			</avoidCallsTo>
 
     </configuration>
