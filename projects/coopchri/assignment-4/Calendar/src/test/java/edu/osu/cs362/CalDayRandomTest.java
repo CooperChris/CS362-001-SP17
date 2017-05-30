@@ -26,13 +26,14 @@ public class CalDayRandomTest {
                 CalDay day = new CalDay(cal);
                 //create the value generator and a appt
                 //ValuesGenerator gen = new ValuesGenerator();
-                Appt appt = new Appt(12, 30, cal.get(cal.DAY_OF_MONTH), cal.get(cal.MONTH), cal.get(cal.YEAR), "Birthday", "birthday");
 
                 //create variables for hour, minute and counter of appts
                 int hour, min, count = 0;
                 //start a loop to change values and begin adding appointments
                 for (int i = 0; i < 1000; i++){
-                     //check if appt is valid
+                     Appt appt = new Appt(12, 30, cal.get(cal.DAY_OF_MONTH), cal.get(cal.MONTH), cal.get(cal.YEAR), "Birthday", "birthday");
+
+                    //check if appt is valid
                      if (appt.getValid() == true){
                         //add to counter
                         count = count + 1;
@@ -48,7 +49,9 @@ public class CalDayRandomTest {
                      appt.setStartMinute((int)ValuesGenerator.getRandomIntBetween(rnd, 30, 60));
                 }
                 for (int i = 0; i < 1000; i++){
-                     //check if appt is valid
+                     Appt appt = new Appt(12, 30, cal.get(cal.DAY_OF_MONTH), cal.get(cal.MONTH), cal.get(cal.YEAR), "Birthday", "birthday");
+
+//check if appt is valid
                      if (appt.getValid() == true){
                         //add to counter
                         count = count + 1;

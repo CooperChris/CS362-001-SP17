@@ -33,19 +33,23 @@ public class TimeTableRandomTest {
                LinkedList<Appt> appts = new LinkedList<Appt>();
                LinkedList<Appt> testAppts = new LinkedList<Appt>();
                LinkedList<Appt> testApptsNew = new LinkedList<Appt>();
-               //Create basic appt
-               Appt appt = new Appt(12, 30, 
-                     cal.get(cal.DAY_OF_MONTH), 
-                     cal.get(cal.MONTH), 
-                     cal.get(cal.YEAR), 
-                     "Birthday", "birthday");
                //create ten appointments at random that are all valid
                for (int i = 0; i < 100; i++){
+                  Appt appt = new Appt(12, 30, 
+                        cal.get(cal.DAY_OF_MONTH), 
+                        cal.get(cal.MONTH), 
+                        cal.get(cal.YEAR), 
+                        "Birthday", "birthday");
                   appt.setStartHour((int)ValuesGenerator.getRandomIntBetween(rnd, 1, 23));
                   appt.setStartMinute((int)ValuesGenerator.getRandomIntBetween(rnd, 1, 59));
                   appts.add(appt);
                   testAppts.add(appt);
                }
+               Appt appt = new Appt(12, 30, 
+                     cal.get(cal.DAY_OF_MONTH), 
+                     cal.get(cal.MONTH), 
+                     cal.get(cal.YEAR), 
+                     "Birthday", "birthday");
 
                //create one invalid appt
                appt.setStartHour(-10);
@@ -54,10 +58,10 @@ public class TimeTableRandomTest {
                appts.add(null);
 
                /*/create CalDay and add appts
-               CalDay day = new CalDay(cal);
+                 CalDay day = new CalDay(cal);
                //loop through all of appts and add to cal
                for (int i = 0; i < appts.size(); i++){
-                  day.addAppt(appts.get(i));
+               day.addAppt(appts.get(i));
                }*/
 
                //create variables to help test
@@ -74,8 +78,8 @@ public class TimeTableRandomTest {
                      testApptsNew = table.deleteAppt(testApptsNew, appts.get(index));
                   }
                }
-	 }
+          }
 
 
-	
+
 }
